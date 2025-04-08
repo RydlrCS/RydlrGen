@@ -20,7 +20,7 @@ from django.urls import path, include
 from rest_framework.routers import DefaultRouter
 from rest_framework.authtoken.views import obtain_auth_token
 from .views import UserViewSet, TeamViewSet, ActivityViewSet, LeaderboardViewSet, WorkoutViewSet, api_root
-from monafit_tracker.views import ProtectedView
+from octofit_tracker.views import ProtectedView
 
 router = DefaultRouter()
 router.register(r'users', UserViewSet)
