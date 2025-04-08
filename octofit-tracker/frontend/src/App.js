@@ -5,6 +5,7 @@ import Leaderboard from './components/Leaderboard';
 import Teams from './components/Teams';
 import Users from './components/Users';
 import Workouts from './components/Workouts';
+import Login from './components/Login';
 import './App.css';
 import logo from './octofitapp-small.png';
 
@@ -36,6 +37,9 @@ function App() {
                 <li className="nav-item">
                   <Link className="nav-link" to="/workouts">Workouts</Link>
                 </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/login">Login</Link>
+                </li>
               </ul>
             </div>
           </div>
@@ -47,6 +51,7 @@ function App() {
             <Route path="/teams" element={<Teams />} />
             <Route path="/users" element={<Users />} />
             <Route path="/workouts" element={<Workouts />} />
+            <Route path="/login" element={<Login />} />
             <Route path="/" element={<h1>Welcome to OctoFit Tracker</h1>} />
           </Routes>
         </div>
