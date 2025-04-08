@@ -18,7 +18,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
+from rest_framework.authtoken.views import obtain_auth_token
 from .views import UserViewSet, TeamViewSet, ActivityViewSet, LeaderboardViewSet, WorkoutViewSet, api_root
+from monafit_tracker.views import ProtectedView
 
 router = DefaultRouter()
 router.register(r'users', UserViewSet)
@@ -31,4 +33,6 @@ urlpatterns = [
     path('', api_root, name='api-root'),
     path('admin/', admin.site.urls),
     path('api/', include(router.urls)),
+    path('api-token-auth/', obtain_auth_token, name='api_token_auth'),
+    path('protected/', ProtectedView.as_view(), name='protected_view'),
 ]

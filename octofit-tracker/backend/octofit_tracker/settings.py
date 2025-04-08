@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     "rest_framework",
     "djongo",
     "octofit_tracker",
+    "rest_framework.authtoken",
 ]
 
 MIDDLEWARE = [
